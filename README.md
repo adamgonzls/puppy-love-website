@@ -1,2 +1,2 @@
-# Puppy-Love-website
-## Website developed from designer-provided mockup
+# Puppy Love website
+### Website developed from designer-provided mockup
