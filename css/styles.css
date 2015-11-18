@@ -1,0 +1,286 @@
+/****************************************
+  Inherited Syles
+*****************************************/
+
+/*
+See this explanation for details
+https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+*/
+
+html {
+    box-sizing: border-box;
+    color: #444;
+    font: 12pt 'Open Sans', Arial;
+    font-weight: 300;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    color: inherit;
+    font: inherit;
+}
+
+/****************************************
+  Defaults
+*****************************************/
+
+p {
+  margin: 0;
+}
+
+/****************************************
+  Helpers
+*****************************************/
+
+
+/****************************************
+  Layout
+*****************************************/
+
+/* Abstractions */
+.panel > div {
+  width: 960px;
+  margin: 0 auto;
+}
+
+/**
+ * Hero
+ */
+
+.panel.hero {
+  background-repeat: no-repeat;
+  background: radial-gradient(rgba(3, 143, 168, .7), 
+    rgba(3, 143, 168, 1)), 
+    url("/images/bg.jpg");
+  background-size: cover;
+}
+
+.hero > div {
+  min-height: 500px;
+  position: relative;
+}
+
+.primary-header {
+  min-height: 75px;
+  margin-bottom: 15px;
+}
+
+.logo {
+  color: #fff;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+.logo a {
+  font: 36pt Lobster;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.search-form {
+  position: absolute;
+  right: 0;
+  top: 10px;
+}
+
+.search-form > input {
+  border: none;
+  color: #fff;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, .5);
+}
+
+.search-form .submit-button {
+  background-color: #EA501A;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+.primary-nav {
+  color: #fff;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, .5);
+  border-bottom: 1px solid rgba(255, 255, 255, .5);
+}
+
+.primary-nav a {
+  font-size: 12pt;
+  text-decoration: none;
+  display: inline-block;
+  padding: 15px;
+  text-transform: uppercase;
+}
+
+.tagline {
+  min-height: 50px;
+  font-size: 14pt;
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  right: 0;
+}
+
+.tagline > h6 {
+  font-size: 32pt;
+  margin: 20px;
+}
+
+.tagline > p {
+  font-size: 12pt;
+}
+
+/**
+ * Primary Content
+ */
+
+.primary-content {
+  background-color: #D7E1E7;
+  min-height: 750px;
+}
+
+.primary-content > div {
+  min-height: 100px;
+}
+
+.breakout-boxes {
+  min-height: 50px;
+  text-align: center;
+}
+
+.breakout-boxes > div {
+  background-color: #fff;
+  display: inline-block;
+  width: 300px;
+  padding: 10px;
+  border-top: 4px solid;
+  margin: 0 5px 0 5px;
+  box-shadow: 0px 1px 9px 2px rgba(0,0,0,0.28);
+  transform:translate(0,-20px);
+}
+
+.breakout-boxes h5 {
+  font-weight: bold;
+  margin: 0;
+}
+
+.breakout-text {
+  color: #444A5A;
+  margin: 15px 0;
+}
+
+.breakout-boxes div:nth-child(1) {
+  border-color: #ED4F18;
+}
+
+.breakout-boxes div:nth-child(2) {
+  border-color: #8FD040;
+}
+
+.breakout-boxes div:nth-child(3) {
+  border-color: #0692D4;
+}
+
+.breakout-boxes button {
+  border-radius: 4px;
+  background-color: #fff;
+  border: 3px solid;
+}
+
+.breakout-boxes > div:nth-child(1) button {
+  border-color: #ED4F18;
+  color: #ED4F18;
+}
+
+.breakout-boxes > div:nth-child(2) button {
+  border-color: #8FD040;
+  color: #8FD040;
+}
+
+.breakout-boxes > div:nth-child(3) button {
+  border-color: #0692D4;
+  color: #0692D4;
+}
+
+.content-box {
+  display: flex;
+  background-color: #fff;
+  box-shadow: 0px 1px 9px 2px rgba(0,0,0,0.28);
+}
+
+.content-box aside {
+  width: 410px;
+}
+
+main {
+  flex: 1;
+}
+
+.puppy-tiles {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px;
+}
+
+/****************************************
+  Components
+*****************************************/
+
+/**
+ * Primary Content
+ */
+
+.media-object {
+  display: flex;
+  margin: 10px;
+  min-height: 50px;
+}
+
+.media-object .media-graphic {
+  height: 100px;
+  width: 100px;
+  background-size: cover;
+}
+
+.media-object .media-content {
+  flex: 1;
+  background-color: #E8F3F9;
+  padding-left: 5px;
+}
+ 
+.media-content > h4 {
+  font-size: 22px;
+  color: #3A9FD6;
+  padding: 2px;
+  margin: 0;
+}
+
+.media-content > p {
+  font-size: 12pt;
+  padding: 2px;
+}
+
+.puppy-tiles .tile {
+  width: calc(33.33% - 10px);
+  margin: 5px;
+}
+
+.puppy-tiles .graphic {
+  background-size: cover;
+  height: 160px;
+}
+
+.tile-caption > div {
+  font: 12pt 'Open Sans';
+  color: #4F7916;
+  background-color: #8ECF41;
+  padding-left: 4px;
+}
+
+.tile-caption > p {
+  color: #507821;
+  margin: 0;
+  background-color: #E3EFD6;
+  padding: 4px;
+}
