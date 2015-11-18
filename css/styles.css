@@ -51,7 +51,7 @@ p {
   background-repeat: no-repeat;
   background: radial-gradient(rgba(3, 143, 168, .7), 
     rgba(3, 143, 168, 1)), 
-    url("/images/bg.jpg");
+    url("./images/bg.jpg");
   background-size: cover;
 }
 
